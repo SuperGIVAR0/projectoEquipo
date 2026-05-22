@@ -6,11 +6,8 @@
 
 ## ✨ Descripción
 
-Explica de qué trata el proyecto, cuál es su objetivo y qué lo hace interesante.
-
-Ejemplo:
-
-> Este proyecto fue desarrollado como parte de una práctica/prototipo/videojuego/aplicación enfocada en ________.
+> Este proyecto fue desarrollado como parte de una práctica enfocada en los temas vistos en repositorios.
+> Es un sistema de registro y verificación de assets para videojuegos, en C++, con una infraestructura de repositorio.
 
 ---
 
@@ -38,10 +35,10 @@ Solo reemplaza los nombres aquí:
 
 | Nombre   | Rol         | GitHub   |
 | -------- | ----------- | -------- |
-| Nombre 1 | Programador | @usuario |
-| Nombre 2 | Programador | @usuario |
-| Nombre 3 | Programador | @usuario |
-| Nombre 4 | Programador | @usuario |
+| Nahbi Areli Salgado Camacho | Programador | nahbi.salgado@uniat.edu.mx |
+| Emiliano Tovar Bastidas | Programador | emiliano.tovar@uniat.edu.mx |
+| Gilberto Vargas Rodríguez | Programador | gilberto.vargas@uniat.edu.mx |
+| Santiago Puron Lombardero | Programador | santiago.puron@uniat.edu.mx |
 
 ---
 
