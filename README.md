@@ -1,6 +1,6 @@
 # 🎮 Nombre del Proyecto
 
-> Una breve descripción de tu proyecto aquí.
+> Codex.
 
 ---
 
