@@ -16,8 +16,7 @@
 
 ## 🛠️ Tecnologías Utilizadas
 
-* Lenguaje: TBD
-* Motor o Framework: TBD
+
 * Control de versiones: `Git & GitHub`
 
 ---
@@ -41,6 +40,7 @@ Solo reemplaza los nombres aquí:
 | Emiliano Tovar Bastidas | Programador | emiliano.tovar@uniat.edu.mx |
 | Gilberto Vargas Rodríguez | Programador | gilberto.vargas@uniat.edu.mx |
 | Santiago Puron Lombardero | Programador | santiago.puron@uniat.edu.mx |
+| Christian Mizael Velazquez Mendo | Programador | christian.velazquez@uniat.edu.mx |
 
 ---
 
