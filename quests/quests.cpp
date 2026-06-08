@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+//Estructura de Quests
 struct Quest {
     std::string nombreQuest;
     std::string descripcion;
@@ -8,6 +9,8 @@ struct Quest {
     int dificultad;
 };
 
+
+//Basicamente te hace un recorrido de todas las quests
 void mostrarQuests(Quest misiones[]) {
     for (int i=0; i < 10; i++) {
         std::cout << "Quest: " << (*(misiones+i)).nombreQuest << std::endl;
@@ -21,6 +24,7 @@ void mostrarQuests(Quest misiones[]) {
     }
 }
 
+//Una vez mostrada las quests, les puse un indice a lado, para que eliga si esta ocupada o desocupada
 void completarQuests(Quest misiones[],std::string*& historial, int& cantidadHistorial) {
     int indice;
     int opcion;
@@ -32,23 +36,35 @@ void completarQuests(Quest misiones[],std::string*& historial, int& cantidadHist
         std::cout << "1. Ocupar\n2. Desocupar\n";
         std::cin >> opcion;
 
+        //aqui va el puntero directo a la mision que hayas seleccionado en indice
         Quest* quest = misiones + indice;
 
+
+        //Si elige la opcion uno que es la de ocupada, pues la hara true, por eso en todas les puse false al principio
         if (opcion == 1) {
             (*quest).completada = true;
 
+
+            //al momento de poner new, se agrega al heap en vez de al stack
             std::string* nuevoHistorial = new std::string[cantidadHistorial + 1];
 
+            //actualiza el historial
             for (int i = 0; i < cantidadHistorial; i++) {
                 nuevoHistorial[i] = historial[i];
             }
 
+            //lo que guarda es el nombre de la mision
             nuevoHistorial[cantidadHistorial] = (*quest).nombreQuest;
 
+
+            //libera memoria
             delete[] historial;
 
+
+            //lo actualiza
             historial = nuevoHistorial;
 
+            //aumenta historial de 0 a 1 y consecutivamente
             cantidadHistorial++;
         }
         else if (opcion == 2) {
@@ -76,6 +92,8 @@ void mostrarHistorial(std::string historial[], int cantidadHistorial) {
 }
 
 void quests() {
+
+    //Tamanno de misiones que hay
     Quest misiones[10];
 
     misiones[0]={"0.Matar dragon","Traer la pezunna del dragon", false, 10};
@@ -89,9 +107,13 @@ void quests() {
     misiones[8]={"8.Eliminacion con sigilo","Elimina jefe duende sin alertar a su manada", false, 7};
     misiones[9]={"9.Investigacion", "Resuelve asesinato del Conde de MonteCristo", false, 3};
 
+    //Se ocupan para poder guardar el historial, puse a nullptr, porque basicamente no se utiliza todavia, sino hasta que
+    //jala la funcion y le puse 0 pa que no apunte a otro lugar en mi ram.
     std::string* historial = nullptr;
     int cantidadHistorial = 0;
 
+
+    //Listado de cosas que puedes hacer
     int opcion = 0;
     while (opcion != 4) {
         std::cout<<"1. mostrar Quests"<<std::endl;
@@ -100,12 +122,15 @@ void quests() {
         std::cout<<"4. Salir de quests\n"<<std::endl;
         std::cin>>opcion;
 
+        //Switch con funciones adentro de lo que pueden hacer
         switch (opcion) {
             case 1: {
                 mostrarQuests(misiones);
                 break;
             }
             case 2: {
+
+                //Esta otra vez esta funcion por si no eligio la opcion 1
                 mostrarQuests(misiones);
                 completarQuests(misiones, historial, cantidadHistorial);
                 mostrarQuests(misiones);
