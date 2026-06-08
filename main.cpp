@@ -47,6 +47,7 @@ int main() {
     do{
         std::cout << "⦿ Bienvenido a Guildex - Menú Aventureros ⦿ \n\n 1 ≡ Registro de Usuario \n 2 ≡ Baja de Usuario \n 3 ≡ Búsqueda de Usuario \n 4 ≡ Listado de Roster \n 5 ≡ Salir " << std::endl;
 std::cin>> op;
+        std::cin.ignore();
     switch (op) {
         case 1:
             Registro(R);
@@ -90,31 +91,37 @@ void Registro(Roster &R) {
 
     //Se rellenan los valores del aventurero
         std::cout<<"\n  Nombre : "<<std::endl;
-        std::cin>>R.integrantes[i].Nombre;
+     std::getline(std::cin , R.integrantes[i].Nombre);
 
         std::cout<<"\n Contraseña : "<<std::endl;
         std::cin>>R.integrantes[i].Contraseña;
+    std::cin.ignore();
 
     std::cout<<"\n Rango : "<<std::endl;
         std::cin>>R.integrantes[i].Rango;
+    std::cin.ignore();
 
     std::cout<<"\n Raza : "<<std::endl;
-        std::cin>>R.integrantes[i].Raza;
+      std::getline( std::cin , R.integrantes[i].Raza);
 
     std::cout<<"\n Edad : "<<std::endl;
         std::cin>>R.integrantes[i].Edad;
+    std::cin.ignore();
 
     std::cout<<"\n Clase : "<<std::endl;
-        std::cin>>R.integrantes[i].Clase;
+       std::getline(  std::cin,R.integrantes[i].Clase);
 
     std::cout<<"\n Fuerza : "<<std::endl;
         std::cin>>R.integrantes[i].Fuerza;
+    std::cin.ignore();
 
     std::cout<<"\n Agilidad : "<<std::endl;
         std::cin>>R.integrantes[i].Agilidad;
+    std::cin.ignore();
 
     std::cout<<"\n Sabiduría : "<<std::endl;
         std::cin>>R.integrantes[i].Sabiduría;
+    std::cin.ignore();
 
     std::cout<<"\n Carisma : "<<std::endl;
         std::cin>>R.integrantes[i].Carisma;
@@ -153,7 +160,7 @@ void Baja(Roster &R) {
     std::cout<<"\n \n"<<std::endl;
     std::cout<<"¡! ❞ BORRAR DATOS DEL AVENTURERO ❞ ¡!\n"<<std::endl;
     std::cout<<"Ingrese el nombre del usuario: "<<std::endl;
-    std::cin>>Usuario;
+    std::getline( std::cin , Usuario);
     bool encontrado = false;
     //Va por todos los usuarios en el contador
     for (int i = 0; i < R.contador; i++) {
@@ -191,7 +198,7 @@ void BusquedaAventurero(Roster &R) {
     std::string Usuario;
     std::cout<<"ೃ‧₊› BUSCAR AVENTURERO \n"<<std::endl;
     std::cout<<"Ingrese el Nombre de Usuario: "<<std::endl;
-    std::cin>>Usuario;
+  std::getline(   std::cin,Usuario);
     bool encontrado = false;
     for (int i = 0; i < R.contador; i++) {
         if (Usuario == R.integrantes[i].Nombre) {
