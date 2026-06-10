@@ -62,13 +62,13 @@ Estructura de branches obligatoria:
 
 Solo reemplaza los nombres aquí:
 
-| Nombre   | Rol         | GitHub   |
-| -------- | ----------- | -------- |
-| Nahbi Areli Salgado Camacho | Programador | nahbi.salgado@uniat.edu.mx |
-| Emiliano Tovar Bastidas | Programador | emiliano.tovar@uniat.edu.mx |
-| Gilberto Vargas Rodríguez | Programador | gilberto.vargas@uniat.edu.mx |
-| Santiago Puron Lombardero | Programador | santiago.puron@uniat.edu.mx |
-| Christian Mizael Velazquez Mendo | Programador | christian.velazquez@uniat.edu.mx |
+| Nombre   | Rol         | Rama Trabajada | GitHub   |
+| -------- | ----------- | -------- | -------- |
+| Nahbi Areli Salgado Camacho | Members | Programador | nahbi.salgado@uniat.edu.mx |
+| Emiliano Tovar Bastidas | UI | Programador | emiliano.tovar@uniat.edu.mx |
+| Gilberto Vargas Rodríguez | Quests | Programador | gilberto.vargas@uniat.edu.mx |
+| Santiago Puron Lombardero | Inventory | Programador | santiago.puron@uniat.edu.mx |
+| Christian Mizael Velazquez Mendo | Detalles Extra | Programador | christian.velazquez@uniat.edu.mx |
 
 ---
 
