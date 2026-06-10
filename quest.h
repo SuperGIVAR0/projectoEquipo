@@ -13,6 +13,9 @@ struct Quest {
     int dificultad;
 };
 
+void mostrarQuests(Quest misiones[]);
+void completarQuests(Quest misiones[], std::string*& historial, int& cantidadHistorial);
+void mostrarHistorial(std::string historial[], int cantidadHistorial);
 void quests();
 
 #endif //PROJECTOEQUIPO_QUEST_H
