@@ -1,13 +1,6 @@
 #include <iostream>
 #include <string>
-
-//Estructura de Quests
-struct Quest {
-    std::string nombreQuest;
-    std::string descripcion;
-    bool completada;
-    int dificultad;
-};
+#include "quest.h"
 
 
 //Basicamente te hace un recorrido de todas las quests
