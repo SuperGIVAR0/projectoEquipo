@@ -12,7 +12,7 @@ struct Quest {
     bool completada;
     int dificultad;
 };
-
+//agregado por Emiliano
 void mostrarQuests(Quest misiones[]);
 void completarQuests(Quest misiones[], std::string*& historial, int& cantidadHistorial);
 void mostrarHistorial(std::string historial[], int cantidadHistorial);
