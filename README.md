@@ -62,7 +62,7 @@ Estructura de branches obligatoria:
 
 Solo reemplaza los nombres aquí:
 
-| Nombre   | Rol         | Rama Trabajada | GitHub   |
+| Nombre   | Rama trabajado | Rol | GitHub   |
 | -------- | ----------- | -------- | -------- |
 | Nahbi Areli Salgado Camacho | Members | Programador | nahbi.salgado@uniat.edu.mx |
 | Emiliano Tovar Bastidas | UI | Programador | emiliano.tovar@uniat.edu.mx |
