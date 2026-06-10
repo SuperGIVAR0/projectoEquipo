@@ -3,4 +3,5 @@ project(Members)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Members main.cpp)
+add_executable(Members main.cpp
+MEMBERS.cpp)
