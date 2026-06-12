@@ -1,70 +1,70 @@
 #ifndef PROYECTO_GUILDEX_H
 #define PROYECTO_GUILDEX_H
-
-#include <string>
-
-
-
-struct Adventurer {
+//--------------------------INVENTARIO-------------------------
+struct Item
+{
     int id;
-    char name[50];
-    char adventurer_class[50];
-    int level;
-    char rank;
-    int active;
+    char nombre[50];
+    int cantidad;
+    char descripcion[50];
+    float valor;
+};
 
-    // Stats agregados del trabajo de Nahbi
-    int fuerza;
-    int agilidad;
-    int sabiduria;
-    int carisma;
+struct Adventurer
+{
+    int id;
+    char nombre[50];
+};
+
+struct QuestInventario
+{
+    int id;
+    char nombre[50];
+    int recompensa;
+};
+
+void inventory();
+
+//--------------------------MIEMBROS-------------------------
+
+struct  Aventureros {
+    std::string Nombre;
+    int Contraseña;
+    char Rango;
+    std::string Raza;
+    int Edad;
+    std::string Clase;
+    int Fuerza;
+    int Agilidad;
+    int Sabiduría;
+    int Carisma;
 };
 
 struct Roster {
-    char nombreDeRoster[50];
-    Adventurer integrantes[5];
+    std::string NombreDeRoster;
+    Aventureros integrantes[5];
     int contador;
 };
 
-struct Item {
-    int id;
-    char name[50];
-    char description[100];
-    int quantity;
-    double value;
-};
-
-struct Quest {
-    int id;
-    char title[50];
-    char description[100];
-    int difficulty;
-    int reward;
-    int assignee_id;
-    int completed;
-};
-
-// ==========================================
-// 2. PROTOTIPOS DE FUNCIONES
-// ==========================================
-
-// --- Módulo 1: Miembros (Nahbi) ---
+//Registra un aventurero al roster
 void Registro(Roster &R);
-void ImprimirDatos(Roster &A);
+//Imprime datos de los aventureros
+void ImprimirDatos(Aventureros &A);
+//Da de baja un aventurero del roster
 void Baja(Roster &R);
+//Busca entre los 5 aventureros si existe el de la busqueda e imprime
 void BusquedaAventurero(Roster &R);
+//Muestra el roster total
 void ListadoRoster(Roster &R);
+
 void members();
-
-// --- Módulo 2: Inventario (Santiago) ---
-void inventory();
-int buscarItem(Item* inventario, int cantidadItems, int idBuscado);
-void mostrarInventario(Item* inventario, int cantidadItems);
-
-// --- Módulo 3: Misiones (Gilberto) ---
-void mostrarQuests(Quest misiones[]);
-void completarQuests(Quest misiones[], std::string*& historial, int& cantidadHistorial);
-void mostrarHistorial(std::string historial[], int cantidadHistorial);
+//--------------------------MISIONES-------------------------
+struct Quest {
+    std::string nombreQuest;
+    std::string descripcion;
+    bool completada;
+    int dificultad;
+};
 void quests();
 
 #endif //PROYECTO_GUILDEX_H
