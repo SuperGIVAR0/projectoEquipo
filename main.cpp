@@ -1,46 +1,43 @@
 #include <iostream>
-#include "guildex.h" // ¡Aquí conectas tu archivo maestro!
-
-using namespace std;
+#include "includeAllH.h"
 
 int main() {
-    int opcion;
+    int opcion = 0;
 
     do {
-        // --- Interfaz del Menú ---
-        cout << "\n====================================\n";
-        cout << "       SISTEMA GUILDEX v1.0         \n";
-        cout << "====================================\n";
-        cout << "1. Gestionar Miembros\n";
-        cout << "2. Gestionar Inventario\n";
-        cout << "3. Gestionar Misiones\n";
-        cout << "4. Salir del Sistema\n";
-        cout << "====================================\n";
-        cout << "Elige una opcion: ";
-        cin >> opcion;
+        std::cout << "1. Reporte general\n";
+        std::cout << "2. Gestion de Quests\n";
+        std::cout << "3. Gestion de Miembros\n";
+        std::cout << "4. Gestion de Inventario\n";
+        std::cout << "5. Salir\n";
+        std::cout << "Opcion: ";
+        std::cin >> opcion;
 
-        // --- Navegación ---
-        switch(opcion) {
+        switch (opcion) {
             case 1:
-                cout << "\nAbriendo modulo de Miembros...\n";
-                // members(); <-- Aquí llamarás a la función de Nahbi después
+                std::cout<<"No se como lo agregarias xd";
                 break;
+
             case 2:
-                cout << "\nAbriendo modulo de Inventario...\n";
-                // inventory(); <-- Aquí llamarás a la función de Santiago después
+                quests();
                 break;
+
             case 3:
-                cout << "\nAbriendo modulo de Misiones...\n";
-                // quests(); <-- Aquí llamarás a la función de Gilberto después
+                members();
                 break;
+
             case 4:
-                cout << "\nCerrando el sistema Guildex. ¡Hasta pronto!\n";
+                inventory();
                 break;
+
+            case 5:
+                std::cout << "Saliendo...\n";
+                break;
+
             default:
-                cout << "\nOpcion no valida. Intenta de nuevo.\n";
+                std::cout << "Opcion invalida.\n";
         }
 
-    } while(opcion != 4); // El ciclo se repite hasta que elijan salir (4)
-
+    } while (opcion != 5);
     return 0;
 }
